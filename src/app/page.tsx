@@ -1,65 +1,113 @@
-import Image from "next/image";
+import Container from '@/components/container'
+import Link from 'next/link'
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* ===== HERO SECTION ===== */}
+      <section className="relative overflow-hidden">
+        <Container>
+          <div className="pt-20 pb-24">
+            <h1 className="max-w-3xl text-4xl font-semibold tracking-tight md:text-6xl">
+              INDICARA — <span className="text-brand-red">Kolaborasi Lintas Bidang</span>
+              <br /> untuk Solusi Digital yang Efisien
+            </h1>
+
+            <p className="mt-5 max-w-2xl text-lg text-gray-300">
+              Kami adalah tim multidisiplin dengan latar belakang software engineering, desain,
+              manajemen, sastra, dan komunikasi. INDICARA berfokus pada kolaborasi lintas bidang
+              untuk menciptakan solusi digital yang kreatif, efisien, dan berdampak.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="#services" className="rounded-lg bg-white/10 px-4 py-2 font-medium hover:bg-white/15">
+                Lihat Layanan
+              </a>
+              <a href="#contact" className="rounded-lg bg-brand-red px-4 py-2 font-medium hover:bg-brand-red/90">
+                Hubungi Kami
+              </a>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              <span className="badge">Web Development</span>
+              <span className="badge">Mobile App</span>
+              <span className="badge">UI/UX Design</span>
+              <span className="badge">Marketing</span>
+              <span className="badge">Localization</span>
+              <span className="badge">IoT</span>
+            </div>
+          </div>
+        </Container>
+
+        {/* background blobs */}
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute -top-32 left-10 h-72 w-72 rounded-full bg-brand-red/30 blur-[80px]" />
+          <div className="absolute -right-20 top-10 h-80 w-80 rounded-full bg-brand-red/20 blur-[100px]" />
+          <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-white/5 blur-[80px]" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+      </section>
+
+      {/* ===== SERVICES ===== */}
+      <section id="services" className="py-20">
+        <Container>
+          <h2 className="section-title">Layanan Kami</h2>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { title: 'Web Development', desc: 'Membangun website modern dan responsif menggunakan Next.js dan teknologi terkini.' },
+              { title: 'Mobile App', desc: 'Aplikasi Android/iOS menggunakan Flutter yang cepat, elegan, dan konsisten.' },
+              { title: 'UI/UX Design', desc: 'Desain antarmuka dan pengalaman pengguna yang profesional dan berorientasi hasil.' },
+              { title: 'Marketing Strategy', desc: 'Perencanaan konten dan kampanye digital untuk meningkatkan visibilitas brand.' },
+              { title: 'Localization', desc: 'Penerjemahan & adaptasi konten Jepang/Inggris agar relevan dengan pasar global.' },
+              { title: 'IoT Integration', desc: 'Menghubungkan sistem fisik ke platform digital melalui perangkat pintar.' },
+              { title: 'Project Management', desc: 'Perencanaan, eksekusi, dan kontrol proyek lintas bidang secara efisien.' },
+              { title: 'Content Writing', desc: 'Copywriting dan konten kreatif berbahasa Indonesia & Inggris.' },
+            ].map((s) => (
+              <div key={s.title} className="card p-5 hover:bg-white/10 transition-colors">
+                <h3 className="mb-2 font-semibold text-white">{s.title}</h3>
+                <p className="text-sm text-gray-300">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* ===== PROJECTS ===== */}
+      <section id="projects" className="py-20">
+        <Container>
+          <h2 className="section-title">Proyek Unggulan</h2>
+          <div className="grid gap-5 md:grid-cols-3">
+            {[
+              { tag: 'IoT • Web • Payment', title: 'IoT Billiard Billing System', desc: 'Sistem otomatisasi meja biliar berbasis IoT dengan pembayaran QRIS dan dashboard admin real-time.' },
+              { tag: 'AI • Mobile', title: 'Attendance FaceID', desc: 'Aplikasi presensi wajah berbasis AI untuk check-in/out pegawai dengan integrasi cloud.' },
+              { tag: 'Design • Campaign', title: 'Brand Awareness Campaign', desc: 'Landing page dan kampanye digital untuk meningkatkan awareness dan engagement brand klien.' },
+            ].map((p) => (
+              <div key={p.title} className="card p-5">
+                <span className="text-xs text-gray-400">{p.tag}</span>
+                <h3 className="mt-2 text-lg font-semibold">{p.title}</h3>
+                <p className="mt-1 text-sm text-gray-300">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* ===== CONTACT CTA ===== */}
+      <section id="contact" className="py-20">
+        <Container>
+          <div className="card flex flex-col items-start gap-4 p-8 md:flex-row md:items-center md:justify-between">
+            <div>
+              <h3 className="text-xl font-semibold">Siap Kolaborasi dengan INDICARA?</h3>
+              <p className="text-gray-300 mt-1">Ceritakan ide proyekmu—kami akan bantu mewujudkannya.</p>
+            </div>
+            <Link
+              href="mailto:hello@indicara.dev"
+              className="rounded-lg bg-brand-red px-4 py-2 font-medium hover:bg-brand-red/90"
+            >
+              hello@indicara.dev
+            </Link>
+          </div>
+        </Container>
+      </section>
+    </>
+  )
 }

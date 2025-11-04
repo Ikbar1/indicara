@@ -1,26 +1,42 @@
+/* Tailwind v4 */
 @import "tailwindcss";
 
+/* ==== THEME TOKENS (Tailwind v4) ==== */
+@theme {
+  /* Colors: brand */
+  --color-brand-red: #E11D48;
+  --color-brand-redSoft: #F43F5E;
+  --color-brand-black: #0B0B0C;
+  --color-brand-grayDark: #1F1F22;
+  --color-brand-gray: #2A2A2E;
+
+  /* Border radius custom → enables `rounded-xl2` */
+  --radius-xl2: 1.25rem;
+
+  /* Shadow token → enables `shadow-soft` */
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* ==== GLOBAL BACKGROUND GRADIENT ==== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --grad: radial-gradient(1200px 600px at 20% -10%, rgba(225,29,72,0.45), transparent 60%),
+          radial-gradient(800px 600px at 90% 10%, rgba(244,63,94,0.35), transparent 60%),
+          linear-gradient(180deg, #0B0B0C 0%, #1F1F22 100%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+html, body { height: 100%; }
+body { background: var(--grad); color: white; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ==== UTILITIES/COMPONENTS ==== */
+.card {
+  /* Uses the tokens we defined above */
+  @apply rounded-xl2 border border-white/10 bg-white/5 backdrop-blur-sm shadow-soft;
 }
+.badge {
+  @apply inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-gray-200;
+}
+.section-title { @apply mb-6 text-2xl font-semibold; }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
