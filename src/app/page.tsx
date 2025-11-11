@@ -1,5 +1,5 @@
-import Container from '@/components/container'
-import Link from 'next/link'
+import Container from "@/components/container";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -9,21 +9,29 @@ export default function HomePage() {
         <Container>
           <div className="pt-20 pb-24">
             <h1 className="max-w-3xl text-4xl font-semibold tracking-tight md:text-6xl">
-              INDICARA — <span className="text-brand-red">Kolaborasi Lintas Bidang</span>
+              INDICARA —{" "}
+              <span className="text-brand-red">Kolaborasi Lintas Bidang</span>
               <br /> untuk Solusi Digital yang Efisien
             </h1>
 
             <p className="mt-5 max-w-2xl text-lg text-gray-300">
-              Kami adalah tim multidisiplin dengan latar belakang software engineering, desain,
-              manajemen, sastra, dan komunikasi. INDICARA berfokus pada kolaborasi lintas bidang
-              untuk menciptakan solusi digital yang kreatif, efisien, dan berdampak.
+              Kami adalah tim multidisiplin dengan latar belakang software
+              engineering, desain, manajemen, sastra, dan komunikasi. INDICARA
+              berfokus pada kolaborasi lintas bidang untuk menciptakan solusi
+              digital yang kreatif, efisien, dan berdampak.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#services" className="rounded-lg bg-white/10 px-4 py-2 font-medium hover:bg-white/15">
+              <a
+                href="#services"
+                className="rounded-lg bg-white/10 px-4 py-2 font-medium hover:bg-white/15"
+              >
                 Lihat Layanan
               </a>
-              <a href="#contact" className="rounded-lg bg-brand-red px-4 py-2 font-medium hover:bg-brand-red/90">
+              <a
+                href="#contact"
+                className="rounded-lg bg-brand-red px-4 py-2 font-medium hover:bg-brand-red/90"
+              >
                 Hubungi Kami
               </a>
             </div>
@@ -53,16 +61,43 @@ export default function HomePage() {
           <h2 className="section-title">Layanan Kami</h2>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { title: 'Web Development', desc: 'Membangun website modern dan responsif menggunakan Next.js dan teknologi terkini.' },
-              { title: 'Mobile App', desc: 'Aplikasi Android/iOS menggunakan Flutter yang cepat, elegan, dan konsisten.' },
-              { title: 'UI/UX Design', desc: 'Desain antarmuka dan pengalaman pengguna yang profesional dan berorientasi hasil.' },
-              { title: 'Marketing Strategy', desc: 'Perencanaan konten dan kampanye digital untuk meningkatkan visibilitas brand.' },
-              { title: 'Localization', desc: 'Penerjemahan & adaptasi konten Jepang/Inggris agar relevan dengan pasar global.' },
-              { title: 'IoT Integration', desc: 'Menghubungkan sistem fisik ke platform digital melalui perangkat pintar.' },
-              { title: 'Project Management', desc: 'Perencanaan, eksekusi, dan kontrol proyek lintas bidang secara efisien.' },
-              { title: 'Content Writing', desc: 'Copywriting dan konten kreatif berbahasa Indonesia & Inggris.' },
+              {
+                title: "Web Development",
+                desc: "Membangun website modern dan responsif menggunakan Next.js dan teknologi terkini.",
+              },
+              {
+                title: "Mobile App",
+                desc: "Aplikasi Android/iOS menggunakan Flutter yang cepat, elegan, dan konsisten.",
+              },
+              {
+                title: "UI/UX Design",
+                desc: "Desain antarmuka dan pengalaman pengguna yang profesional dan berorientasi hasil.",
+              },
+              {
+                title: "Marketing Strategy",
+                desc: "Perencanaan konten dan kampanye digital untuk meningkatkan visibilitas brand.",
+              },
+              {
+                title: "Localization",
+                desc: "Penerjemahan & adaptasi konten Jepang/Inggris agar relevan dengan pasar global.",
+              },
+              {
+                title: "Graphic Design",
+                desc: "Komunikasi visual yang memanfaatkan elemen-elemen seperti gambar, warna, tipografi, dan tata letak untuk menyampaikan pesan secara efektif dan menarik.",
+              },
+              {
+                title: "Project Management",
+                desc: "Perencanaan, eksekusi, dan kontrol proyek lintas bidang secara efisien.",
+              },
+              {
+                title: "Content Writing",
+                desc: "Copywriting dan konten kreatif berbahasa Indonesia & Inggris.",
+              },
             ].map((s) => (
-              <div key={s.title} className="card p-5 hover:bg-white/10 transition-colors">
+              <div
+                key={s.title}
+                className="card p-5 hover:bg-white/10 transition-colors"
+              >
                 <h3 className="mb-2 font-semibold text-white">{s.title}</h3>
                 <p className="text-sm text-gray-300">{s.desc}</p>
               </div>
@@ -77,9 +112,21 @@ export default function HomePage() {
           <h2 className="section-title">Proyek Unggulan</h2>
           <div className="grid gap-5 md:grid-cols-3">
             {[
-              { tag: 'IoT • Web • Payment', title: 'IoT Billiard Billing System', desc: 'Sistem otomatisasi meja biliar berbasis IoT dengan pembayaran QRIS dan dashboard admin real-time.' },
-              { tag: 'AI • Mobile', title: 'Attendance FaceID', desc: 'Aplikasi presensi wajah berbasis AI untuk check-in/out pegawai dengan integrasi cloud.' },
-              { tag: 'Design • Campaign', title: 'Brand Awareness Campaign', desc: 'Landing page dan kampanye digital untuk meningkatkan awareness dan engagement brand klien.' },
+              {
+                tag: "IoT • Web • Payment",
+                title: "IoT Billiard Billing System",
+                desc: "Sistem otomatisasi meja biliar berbasis IoT dengan pembayaran QRIS dan dashboard admin real-time.",
+              },
+              {
+                tag: "AI • Mobile",
+                title: "Attendance FaceID",
+                desc: "Aplikasi presensi wajah berbasis AI untuk check-in/out pegawai dengan integrasi cloud.",
+              },
+              {
+                tag: "Design • Campaign",
+                title: "Brand Awareness Campaign",
+                desc: "Landing page dan kampanye digital untuk meningkatkan awareness dan engagement brand klien.",
+              },
             ].map((p) => (
               <div key={p.title} className="card p-5">
                 <span className="text-xs text-gray-400">{p.tag}</span>
@@ -96,8 +143,12 @@ export default function HomePage() {
         <Container>
           <div className="card flex flex-col items-start gap-4 p-8 md:flex-row md:items-center md:justify-between">
             <div>
-              <h3 className="text-xl font-semibold">Siap Kolaborasi dengan INDICARA?</h3>
-              <p className="text-gray-300 mt-1">Ceritakan ide proyekmu—kami akan bantu mewujudkannya.</p>
+              <h3 className="text-xl font-semibold">
+                Siap Kolaborasi dengan INDICARA?
+              </h3>
+              <p className="text-gray-300 mt-1">
+                Ceritakan ide proyekmu—kami akan bantu mewujudkannya.
+              </p>
             </div>
             <Link
               href="mailto:hello@indicara.dev"
@@ -109,5 +160,5 @@ export default function HomePage() {
         </Container>
       </section>
     </>
-  )
+  );
 }

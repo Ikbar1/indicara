@@ -5,7 +5,7 @@ import Container from './container'
 const members = [
   { name: 'Akhnaf', path: '/team/akhnaf' },
   { name: 'Edwar', path: '/team/edwar' },
-  { name: 'Ikbar', path: '/team/ikbar' },
+ { name: 'Ikbar', path: 'https://ikbar1.github.io/' },
   { name: 'Lazuardi', path: '/team/lazuardi' },
   { name: 'Syena', path: '/team/syena' },
 ]
