@@ -113,9 +113,9 @@ export default function HomePage() {
           <div className="grid gap-5 md:grid-cols-3">
             {[
               {
-                tag: "IoT • Web • Payment",
-                title: "IoT Billiard Billing System",
-                desc: "Sistem otomatisasi meja biliar berbasis IoT dengan pembayaran QRIS dan dashboard admin real-time.",
+                tag: "Flutter • Mobile • SQLite",
+                title: "VoST (Volleyball Statistic Team)",
+                desc: "Aplikasi penilaian skor bola voli berbasis Flutter dengan SQLite, mendukung pelacakan kejadian secara real-time, manajemen susunan tim, dan ekspor data ke PDF dan Excel untuk pelaporan pertandingan.",
               },
               {
                 tag: "AI • Mobile",
